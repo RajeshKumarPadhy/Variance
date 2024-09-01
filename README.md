@@ -10,7 +10,6 @@
 
 [Click here to finish setting up your workspace!](https://cloud.nx.app/connect/FStUKiVaQI)
 
-
 ## Run tasks
 
 To run tasks with Nx use:
@@ -34,6 +33,7 @@ These targets are either [inferred automatically](https://nx.dev/concepts/inferr
 While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
 
 To install a new plugin you can use the `nx add` command. Here's an example of adding the React plugin:
+
 ```sh
 npx nx add @nx/react
 ```
@@ -51,7 +51,6 @@ npx nx g @nx/react:lib some-lib
 You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
 
 [Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
 
 [Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
@@ -71,7 +70,89 @@ Learn more:
 - [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
 And join the Nx community:
+
 - [Discord](https://go.nx.dev/community)
 - [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
+- [Our YouTube channel](https://www.youtube.com/@nxdevtools)
 - [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+
+<pre>
+
+```txt
+
+/variance
+├── apps                                      # Main user-facing applications
+│   ├── web (Next.js)                         # Web application *
+│   ├── native (Expo)                         # Mobile application using Expo *
+│   ├── server (NestJS)                       # Backend API server *
+│   ├── cms (KeystoneJS)                      # Content management system *
+│   ├── control-center (React)                # Internal admin dashboard *
+├── services                                  # Non-user-facing services
+│   ├── gateway                               # API Gateway (e.g., Apollo Gateway, NGINX)
+│   └── jobs                                  # Background jobs and workers
+├── libs                                      # Shared libraries and modules
+│   ├── ui                                    # Shared UI components
+│   │   ├── web                               # Components for web
+│   │   └── native                            # Components for native
+│   ├── state                                 # State management (Mobx)
+│   ├── api                                   # API clients and logic
+│   ├── graphql                               # GraphQL utilities
+│   ├── config                                # Configuration management
+│   ├── types                                 # Shared TypeScript types
+│   ├── hooks                                 # Shared hooks
+│   ├── utils                                 # Utility functions
+│   ├── auth                                  # Auth and authorization modules
+│   ├── caching                               # Caching utilities
+│   ├── db                                    # Database utilities and ORM
+│   ├── i18n                                  # Internationalization
+│   ├── analytics                             # Analytics integrations
+│   ├── error-handling                        # Error handling and logging
+│   ├── monitoring                            # Monitoring tools
+│   ├── feature-flags                         # Feature flag management
+│   ├── payment                               # Payment processing
+│   ├── notifications                         # Notifications
+│   ├── migrations                            # Data migrations
+│   └── observability                         # Observability tools (e.g., logs, metrics)
+├── tools                                     # Developer tools and scripts
+│   ├── scripts                               # Custom scripts
+│   ├── devops                                # DevOps utilities
+│   ├── ci                                    # CI configurations
+│   ├── security                              # Security checks
+│   └── infrastructure                        # Infrastructure management
+├── docs                                      # Documentation
+│   ├── api                                   # API documentation
+│   ├── developer                             # Developer guides
+│   ├── user                                  # User manuals
+│   ├── architecture                          # Architecture documentation
+│   └── testing                               # Testing guides
+├── tests                                     # Testing configurations
+│   ├── e2e                                   # End-to-end tests
+│   ├── unit                                  # Unit tests
+│   └── integration                           # Integration tests
+├── infra                                     # Infrastructure as Code (IaC)
+│   ├── terraform                             # Terraform scripts
+│   ├── k8s                                   # Kubernetes configurations
+│   ├── docker                                # Docker setups
+│   └── cloud                                 # Cloud provider configurations
+├── configs                                   # Environment configurations
+│   ├── dev                                   # Development configs
+│   ├── staging                               # Staging configs
+│   └── prod                                  # Production configs
+├── monitoring                                # Monitoring and observability
+│   ├── prometheus                            # Prometheus setup
+│   ├── grafana                               # Grafana dashboards
+│   ├── tracing                               # Tracing tools
+│   └── alerting                              # Alerting rules
+├── .github                                   # GitHub-specific configurations
+│   └── workflows                             # GitHub Actions workflows
+├── .husky                                    # Git hooks
+│   ├── pre-commit                            # Pre-commit hooks
+│   └── pre-push                              # Pre-push hooks
+├── .lintstagedrc                             # Lint-staged configuration
+├── .eslintrc                                 # ESLint configuration
+├── .prettierrc                               # Prettier configuration
+├── .env.example                              # Environment variables template
+├── nx.json                                   # Nx configuration
+└── package.json                              # Root package configuration
+```
+</pre>
